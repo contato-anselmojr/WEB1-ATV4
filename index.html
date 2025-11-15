@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Esperança - Início</title>
 
-  <!-- Importação dos estilos -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
@@ -13,51 +13,71 @@
 <body>
 
   <!-- ===== CABEÇALHO ===== -->
-  <header>
+  <header role="banner">
     <div class="topo">
+
       <div class="info-ong">
-        <img src="assets/img/ong_esperanca.JPG" alt="Logo da ONG Esperança" class="logo-topo">
-        <h1>ONG Esperança</h1>
+        <img src="assets/img/ong_esperanca.JPG"
+             alt="Logotipo circular da ONG Esperança"
+             class="logo-topo">
+        <h1 id="titulo-principal">ONG Esperança</h1>
       </div>
 
-      <nav>
+      <nav aria-label="Menu principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
+
+      <!-- Botão de Alto Contraste -->
+      <button id="toggle-contraste" class="btn-contraste" aria-pressed="false">
+        Alto Contraste
+      </button>
+
     </div>
   </header>
 
   <!-- ===== CONTEÚDO PRINCIPAL ===== -->
-  <main>
-    <section>
-      <h2>Missão, Visão e Valores</h2>
+  <main role="main" tabindex="-1">
+
+    <!-- MISSÃO -->
+    <section aria-labelledby="missaoTitulo">
+      <h2 id="missaoTitulo">Missão, Visão e Valores</h2>
       <p>Nossa missão é promover o bem-estar social e a inclusão através de projetos educativos e solidários.</p>
     </section>
 
-    <section>
-      <h2>Quem Somos</h2>
+    <!-- QUEM SOMOS -->
+    <section aria-labelledby="quemSomosTitulo">
+      <h2 id="quemSomosTitulo">Quem Somos</h2>
+
       <div class="cards-grid">
-        <div class="card">
-          <img src="assets/img/equipe.JPG" alt="Equipe da ONG">
+
+        <div class="card" role="article">
+          <img src="assets/img/equipe.JPG"
+               alt="Equipe de voluntários da ONG reunida em trabalho comunitário">
           <h3>Equipe dedicada</h3>
           <p>Somos uma organização sem fins lucrativos que atua há mais de 10 anos em comunidades carentes, levando esperança e transformação.</p>
         </div>
 
-        <div class="card">
-          <img src="assets/img/cadastro.jpg" alt="Trabalho voluntário">
+        <div class="card" role="article">
+          <img src="assets/img/cadastro.jpg"
+               alt="Voluntário ajudando em projeto social da ONG">
           <h3>Voluntariado</h3>
           <p>Nossos voluntários são o coração da ONG. Juntos, criamos um futuro mais solidário e humano.</p>
         </div>
+
       </div>
     </section>
 
-    <section>
-      <h2>Contato</h2>
+    <!-- CONTATO -->
+    <section aria-labelledby="contatoTitulo">
+      <h2 id="contatoTitulo">Contato</h2>
+
       <p><strong>Telefone:</strong> (11) 99999-9999</p>
       <p><strong>E-mail:</strong> contato@ongesperanca.org</p>
+
       <p><strong>Redes sociais:</strong>  
         <a href="#" class="tag">Facebook</a>
         <a href="#" class="tag">Instagram</a>
@@ -68,16 +88,20 @@
         <a href="projetos.html" class="btn">Ver projetos</a>
       </div>
     </section>
+
   </main>
 
   <!-- ===== RODAPÉ ===== -->
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="js/acessibilidade.js"></script>
   <script src="js/templates.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/form-validation.js"></script>
   <script src="js/spa.js"></script>
+
 </body>
 </html>
