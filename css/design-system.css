@@ -1,29 +1,19 @@
-/* ===============================
-   🎨 DESIGN SYSTEM - ONG ESPERANÇA
-   =============================== */
-
+/* 🎨 SISTEMA DE DESIGN — VARIÁVEIS GERAIS */
 :root {
-  /* ===== CORES ===== */
-  --cor-primaria: #00798c;
-  --cor-secundaria: #0a9396;
-  --cor-terciaria: #94d2bd;
+  /* Cores padrão (tema claro) */
+  --cor-primaria: #0a9396;
+  --cor-secundaria: #005f73;
   --cor-destaque: #ffdd57;
+
   --cor-escura: #001219;
   --cor-clara: #ffffff;
-  --cor-fundo: #f9fafb;
   --cor-texto: #333333;
-  --cor-sucesso: #10b981;
-  --cor-erro: #ef4444;
 
-  /* ===== TIPOGRAFIA ===== */
-  --fonte-principal: "Segoe UI", Arial, sans-serif;
-  --fs-h1: 2.5rem;
-  --fs-h2: 2rem;
-  --fs-h3: 1.5rem;
-  --fs-padrao: 1rem;
-  --fs-legenda: 0.875rem;
+  /* Cores de fundo */
+  --fundo-site: #f9fafb;
+  --fundo-card: #ffffff;
 
-  /* ===== ESPAÇAMENTO (8px SYSTEM) ===== */
+  /* Espaçamentos (escala 8px) */
   --esp-1: 8px;
   --esp-2: 16px;
   --esp-3: 24px;
@@ -31,7 +21,25 @@
   --esp-5: 48px;
   --esp-6: 64px;
 
-  /* ===== SOMBRAS E BORDAS ===== */
-  --sombra-suave: 0 2px 6px rgba(0,0,0,0.15);
+  /* Tipografia */
+  --fonte-principal: "Segoe UI", Arial, sans-serif;
+  --fs-h1: 2rem;
+  --fs-h2: 1.6rem;
+  --fs-h3: 1.3rem;
+  --fs-padrao: 1rem;
+  --fs-legenda: 0.85rem;
+
+  /* Bordas e sombra */
   --raio-borda: 10px;
+  --sombra-suave: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* 🌙 MODO ALTO CONTRASTE */
+body.modo-alto-contraste {
+  --cor-texto: #ffffff;
+  --cor-primaria: #000000;
+  --cor-secundaria: #000000;
+  --fundo-site: #000000;
+  --fundo-card: #000000;
+  --cor-destaque: #ffff00;
 }

@@ -1,0 +1,42 @@
+/* Modo Alto Contraste */
+body.modo-alto-contraste {
+  background:#000!important;
+  color:#fff!important;
+}
+body.modo-alto-contraste header,
+body.modo-alto-contraste main section,
+body.modo-alto-contraste main form,
+body.modo-alto-contraste .card,
+body.modo-alto-contraste footer,
+body.modo-alto-contraste fieldset {
+  background:#000!important;
+  color:#fff!important;
+  border:2px solid #ffee00!important;
+}
+body.modo-alto-contraste h1,
+body.modo-alto-contraste h2,
+body.modo-alto-contraste h3,
+body.modo-alto-contraste p,
+body.modo-alto-contraste label,
+body.modo-alto-contraste legend {
+  color:#fff!important;
+}
+body.modo-alto-contraste input {
+  background:#000!important;
+  color:#fff!important;
+  border:2px solid #ffee00!important;
+}
+body.modo-alto-contraste .tag {
+  background:#000!important;
+  color:#ffee00!important;
+  border:1px solid #ffee00!important;
+}
+body.modo-alto-contraste .btn,
+body.modo-alto-contraste .btn-contraste {
+  background:#000!important;
+  color:#ffee00!important;
+  border:2px solid #ffee00!important;
+}
+body.modo-alto-contraste a {
+  color:#00e1ff!important;
+}

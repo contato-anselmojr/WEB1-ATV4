@@ -1,0 +1,131 @@
+/* ===========================================
+   MODO ALTO CONTRASTE — ONG ESPERANÇA (FINAL)
+   COMPLETO, CORRIGIDO E PRIORIDADE MÁXIMA
+=========================================== */
+
+/* Ativa o modo alto contraste */
+.modo-alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* -------------------------------------------
+   1) TEXTOS PRINCIPAIS
+------------------------------------------- */
+.modo-alto-contraste h1,
+.modo-alto-contraste h2,
+.modo-alto-contraste h3,
+.modo-alto-contraste h4,
+.modo-alto-contraste p,
+.modo-alto-contraste label,
+.modo-alto-contraste legend,
+.modo-alto-contraste span,
+.modo-alto-contraste a {
+  color: #fff !important;
+}
+
+/* placeholder */
+.modo-alto-contraste ::placeholder {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* -------------------------------------------
+   2) INPUTS / FORMULÁRIOS
+------------------------------------------- */
+.modo-alto-contraste input,
+.modo-alto-contraste select,
+.modo-alto-contraste textarea {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.modo-alto-contraste input:focus,
+.modo-alto-contraste select:focus,
+.modo-alto-contraste textarea:focus {
+  outline: 2px solid yellow !important;
+  border-color: yellow !important;
+}
+
+/* -------------------------------------------
+   3) CONTAINERS (form, cards, fieldset)
+------------------------------------------- */
+.modo-alto-contraste .card,
+.modo-alto-contraste fieldset,
+.modo-alto-contraste .form-grid,
+.modo-alto-contraste main section,
+.modo-alto-contraste main form {
+  background: #000 !important;
+  border: 2px solid yellow !important;
+  color: #fff !important;
+}
+
+/* -------------------------------------------
+   4) BOTÕES
+------------------------------------------- */
+.modo-alto-contraste button,
+.modo-alto-contraste .btn {
+  background: #fff !important;
+  color: #000 !important;
+  border: 2px solid #000 !important;
+}
+
+.modo-alto-contraste button:hover,
+.modo-alto-contraste .btn:hover {
+  background: yellow !important;
+  color: #000 !important;
+}
+
+/* -------------------------------------------
+   5) FORÇANDO TUDO DENTRO DO MAIN
+   (derrota style.css completamente)
+------------------------------------------- */
+body.modo-alto-contraste main,
+body.modo-alto-contraste main * {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* containers principais */
+body.modo-alto-contraste main section,
+body.modo-alto-contraste main form,
+body.modo-alto-contraste fieldset {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* -------------------------------------------
+   6) CABEÇALHO E RODAPÉ
+------------------------------------------- */
+body.modo-alto-contraste header,
+body.modo-alto-contraste footer {
+  background: #000 !important;
+  color: #fff !important;
+  border-bottom: 2px solid yellow !important;
+}
+
+/* Links no header */
+body.modo-alto-contraste header a {
+  color: yellow !important;
+}
+
+body.modo-alto-contraste header a:hover {
+  color: #fff !important;
+}
+
+/* -------------------------------------------
+   7) CARDS
+------------------------------------------- */
+body.modo-alto-contraste .card img {
+  border: 2px solid yellow !important;
+}
+
+/* -------------------------------------------
+   8) ALERTAS (mensagem de sucesso)
+------------------------------------------- */
+body.modo-alto-contraste .alert-success {
+  background: #003300 !important;
+  border-color: #00ff00 !important;
+  color: #00ff00 !important;
+}

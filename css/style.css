@@ -1,10 +1,16 @@
 @import url("design-system.css");
 
-/* ===== RESET GLOBAL ===== */
+/* ============================
+   RESET GLOBAL
+============================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +21,9 @@ body {
   min-height: 100vh;
 }
 
-/* ===== CABEÇALHO ===== */
+/* ============================
+   CABEÇALHO
+============================ */
 header {
   background-color: var(--cor-primaria);
   color: var(--cor-clara);
@@ -26,7 +34,6 @@ header {
   box-shadow: var(--sombra-suave);
 }
 
-/* TOPO COM FLEXBOX */
 header .topo {
   display: flex;
   align-items: center;
@@ -35,7 +42,6 @@ header .topo {
   gap: var(--esp-2);
 }
 
-/* BLOCO ESQUERDO */
 header .info-ong {
   display: flex;
   align-items: center;
@@ -51,45 +57,34 @@ header .logo-topo {
   box-shadow: var(--sombra-suave);
 }
 
-/* TÍTULO */
-header .info-ong h1 {
-  font-size: var(--fs-h1);
-  font-weight: 700;
-  color: var(--cor-clara);
-}
-
-/* MENU */
 header nav ul {
   list-style: none;
   display: flex;
   gap: var(--esp-3);
-  margin: 0;
-  padding: 0;
 }
 
 header nav a {
   color: var(--cor-clara);
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   color: var(--cor-destaque);
 }
 
-/* ===== CONTEÚDO PRINCIPAL (GRID) ===== */
-/* ===== BLOCO BRANCO CENTRAL PARA O FORMULÁRIO ===== */
+/* ============================
+   CONTEÚDO PRINCIPAL
+============================ */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   padding: 40px 20px;
 }
 
-/* ===== BLOCO DE INTRODUÇÃO (TÍTULO E TEXTO) ===== */
 main section {
   background: #ffffff;
   color: #003b46;
@@ -99,7 +94,7 @@ main section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   max-width: 650px;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: var(--esp-3);
 }
 
 main section h2 {
@@ -108,14 +103,9 @@ main section h2 {
   margin-bottom: var(--esp-1);
 }
 
-main section p {
-  font-size: var(--fs-padrao);
-  color: #333;
-  line-height: 1.5;
-}
-
-
-/* Caixa branca onde fica o conteúdo do formulário */
+/* ============================
+   FORMULÁRIOS
+============================ */
 main form {
   background: #ffffff;
   padding: 30px;
@@ -126,84 +116,6 @@ main form {
   color: #333;
 }
 
-/* Legendas e bordas do fieldset */
-fieldset {
-  border: 2px solid var(--cor-primaria, #0a9396);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 25px;
-  background: #f9f9f9;
-}
-
-legend {
-  font-weight: bold;
-  color: var(--cor-primaria, #0a9396);
-}
-
-/* Inputs */
-input, button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-input:focus {
-  outline: 2px solid var(--cor-primaria, #0a9396);
-}
-
-/* Botão */
-button.btn {
-  background-color: var(--cor-secundaria, #007f89);
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button.btn:hover {
-  background-color: #005f73;
-}
-
-/* Mensagem de sucesso */
-#mensagem-sucesso {
-  background: #d1fae5;
-  border: 1px solid #10b981;
-  color: #065f46;
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-  margin-top: 20px;
-  display: none;
-}
-
-
-/* SEÇÕES INTERNAS OCUPAM 12 COLUNAS */
-main section {
-  grid-column: span 12;
-  margin-bottom: var(--esp-3);
-}
-
-h2 {
-  font-size: var(--fs-h2);
-  color: var(--cor-primaria);
-  margin-bottom: var(--esp-2);
-}
-
-h3 {
-  font-size: var(--fs-h3);
-  color: var(--cor-secundaria);
-  margin-top: var(--esp-2);
-}
-
-p {
-  font-size: var(--fs-padrao);
-  margin-bottom: var(--esp-1);
-}
-
-/* ===== FORMULÁRIO ===== */
 form {
   display: flex;
   flex-direction: column;
@@ -211,6 +123,7 @@ form {
 }
 
 fieldset {
+  background: #f9f9f9;
   border: 2px solid var(--cor-secundaria);
   border-radius: var(--raio-borda);
   padding: var(--esp-3);
@@ -226,37 +139,124 @@ label {
   font-weight: 600;
 }
 
-input, button {
+input,
+button {
   padding: var(--esp-2);
   font-size: var(--fs-padrao);
-  border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+  border: 1px solid #ccc;
 }
 
 input:focus {
-  outline: 2px solid var(--cor-secundaria);
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 3px;
 }
 
-/* BOTÕES */
-button {
+/* ============================
+   MENSAGEM DE SUCESSO
+============================ */
+#mensagem-sucesso {
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+/* ============================
+   TIPOGRAFIA
+============================ */
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--cor-primaria);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  color: var(--cor-secundaria);
+}
+
+p {
+  font-size: var(--fs-padrao);
+}
+
+/* ============================
+   CARDS
+============================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--esp-3);
+}
+
+.card {
+  background: #ffffff;
+  padding: var(--esp-3);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--raio-borda);
+  margin-bottom: var(--esp-2);
+}
+
+/* ============================
+   TAGS
+============================ */
+.tag {
+  background: var(--cor-primaria);
+  padding: 4px 10px;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 0.85rem;
+}
+
+/* ============================
+   BOTÕES
+============================ */
+.btn {
   background-color: var(--cor-secundaria);
+  padding: var(--esp-2);
   color: var(--cor-clara);
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
+  border-radius: var(--raio-borda);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.2s ease;
+  border: 2px solid transparent;
 }
 
-button:hover {
+.btn:hover {
   background-color: var(--cor-destaque);
   color: var(--cor-escura);
 }
 
-button:active {
-  transform: scale(0.97);
+.btn-contraste {
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
 }
 
-/* ===== RODAPÉ ===== */
+.btn-contraste:focus,
+.btn:focus {
+  outline: 3px solid #ffdd57;
+  outline-offset: 3px;
+}
+
+/* ============================
+   RODAPÉ
+============================ */
 footer {
   background-color: var(--cor-escura);
   color: var(--cor-clara);
@@ -266,17 +266,70 @@ footer {
   font-size: var(--fs-legenda);
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 1280px) {
-  main {
-    max-width: 90%;
-  }
+/* ============================
+   MODO ALTO CONTRASTE — CORRIGIDO
+============================ */
+body.modo-alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
 }
 
+/* Áreas principais */
+body.modo-alto-contraste header,
+body.modo-alto-contraste main section,
+body.modo-alto-contraste main form,
+body.modo-alto-contraste .card,
+body.modo-alto-contraste footer,
+body.modo-alto-contraste fieldset {
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #ffee00 !important;
+}
+
+/* Títulos e textos */
+body.modo-alto-contraste h1,
+body.modo-alto-contraste h2,
+body.modo-alto-contraste h3,
+body.modo-alto-contraste p,
+body.modo-alto-contraste label,
+body.modo-alto-contraste legend {
+  color: #fff !important;
+}
+
+/* Inputs */
+body.modo-alto-contraste input {
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #ffee00 !important;
+}
+
+/* Tags */
+body.modo-alto-contraste .tag {
+  background: #000 !important;
+  color: #ffee00 !important;
+  border: 1px solid #ffee00 !important;
+}
+
+/* Botões */
+body.modo-alto-contraste .btn,
+body.modo-alto-contraste .btn-contraste {
+  background: #000 !important;
+  color: #ffee00 !important;
+  border: 2px solid #ffee00 !important;
+}
+
+/* Links */
+body.modo-alto-contraste a {
+  color: #00e1ff !important;
+}
+
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
 @media (max-width: 1024px) {
   header .topo {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 }
@@ -285,14 +338,6 @@ footer {
   header nav ul {
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
   }
 }
 
@@ -304,15 +349,5 @@ footer {
   .logo-topo {
     width: 60px;
     height: 60px;
-  }
-
-  header nav ul {
-    gap: var(--esp-1);
-  }
-}
-
-@media (max-width: 360px) {
-  h1 {
-    font-size: 1.6rem;
   }
 }
