@@ -87,8 +87,30 @@ Versão minificada: abrir **minificado/index.html**
 
 ---
 
+🗂 Linha do Tempo do Projeto (Atividades Anteriores)
+
+Este projeto é uma evolução contínua realizada ao longo das Atividades 1, 2, 3 e 4 da disciplina de Desenvolvimento Web.
+
+Atividades anteriores:
+
+Atividade 1 – Estrutura HTML
+https://github.com/contato-anselmojr/web1-atividade-2
+Atividade 2 – Estilização com CSS
+https://github.com/contato-anselmojr/WEB1-ATV3
+Atividade 3 – JavaScript e Funcionalidades
+https://github.com/contato-anselmojr/MODULO-WEB1
+A Atividade 4 (este repositório) representa:
+organização final do projeto
+implementação de acessibilidade (WCAG)
+validação aprimorada
+melhorias de estrutura
+modo alto contraste
+versão minificada pronta para deploy
+
 ### 👤 Autor
 
 **Anselmo Junior e Luiz Felix da Silva Filho**
 Curso: Análise e Desenvolvimento de Sistemas
 Disciplina: Desenvolvimento Web – Atividade 4
+
+
