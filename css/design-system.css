@@ -1,0 +1,37 @@
+/* ===============================
+   🎨 DESIGN SYSTEM - ONG ESPERANÇA
+   =============================== */
+
+:root {
+  /* ===== CORES ===== */
+  --cor-primaria: #00798c;
+  --cor-secundaria: #0a9396;
+  --cor-terciaria: #94d2bd;
+  --cor-destaque: #ffdd57;
+  --cor-escura: #001219;
+  --cor-clara: #ffffff;
+  --cor-fundo: #f9fafb;
+  --cor-texto: #333333;
+  --cor-sucesso: #10b981;
+  --cor-erro: #ef4444;
+
+  /* ===== TIPOGRAFIA ===== */
+  --fonte-principal: "Segoe UI", Arial, sans-serif;
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-padrao: 1rem;
+  --fs-legenda: 0.875rem;
+
+  /* ===== ESPAÇAMENTO (8px SYSTEM) ===== */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* ===== SOMBRAS E BORDAS ===== */
+  --sombra-suave: 0 2px 6px rgba(0,0,0,0.15);
+  --raio-borda: 10px;
+}

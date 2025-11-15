@@ -1,107 +1,104 @@
-# WEB1-ATV4
+# 🌱 WEB1 – Atividade 4
 
-🚀 Atividade 4 – Versionamento, Acessibilidade e Deploy
+## Versionamento, Acessibilidade e Deploy
 
-Esta é a Atividade 4, continuação do projeto da ONG Esperança (Atividades 1, 2 e 3).
-Nessa etapa o foco foi deixar o projeto mais próximo de um projeto profissional, trabalhando com:
-Git e GitHub (versionamento e colaboração);
-Acessibilidade (WCAG 2.1 nível AA);
-Preparação para produção (minificação e otimização).
+Esta é a **Atividade 4** do projeto da **ONG Esperança**, continuação das atividades anteriores.
+Nesta etapa o objetivo foi organizar melhor o projeto, melhorar a acessibilidade e preparar tudo para funcionar como um site mais profissional.
 
-🎯 Objetivos da Atividade
+---
 
-Usar Git e GitHub de forma organizada (branches, commits, releases);
-Melhorar a acessibilidade do site para diferentes pessoas e dispositivos;
-Otimizar o código para uso em ambiente de produção;
-Entregar um repositório completo com código, documentação e histórico.
+# 🎯 Objetivos da Atividade
 
-🧱 Versionamento com Git/GitHub
+* Usar Git e GitHub de forma organizada;
+* Criar branches e histórico de versões do projeto;
+* Melhorar a acessibilidade para todos os usuários;
+* Otimizar arquivos para carregar mais rápido;
+* Entregar um repositório completo com README e pastas organizadas.
 
-Para esta atividade foi usado Git para controlar as versões do projeto e GitHub para o repositório remoto.
-Estratégia de branches (GitFlow simplificado)
-main → branch principal, com as versões estáveis;
-develop → branch de desenvolvimento;
-feature/... → branches para funcionalidades (ex: feature/js-spa, feature/acessibilidade).
+---
 
-Commits semânticos
+# 🧱 Versionamento com Git/GitHub
 
-Os commits foram organizados com mensagens simples e semânticas, por exemplo:
-feat: adicionar validação de formulário
-style: ajustar contraste dos botões
-fix: corrigir layout no mobile
-docs: atualizar README da atividade 4
+Foi usado um modelo simples de organização:
 
-Releases
+* **main** → versão final do projeto
+* **develop** → onde o desenvolvimento acontece
+* **feature/** → branches para cada tarefa
 
-As versões foram marcadas com tags e releases no GitHub, seguindo um padrão simples de versionamento:
-v1.0.0 – Estrutura HTML (Atividade 1)
-v2.0.0 – Estilos com CSS/Design System (Atividade 2)
-v3.0.0 – Interatividade com JavaScript (Atividade 3)
-v4.0.0 – Acessibilidade, otimizações e README final (Atividade 4)
+Os commits foram feitos com mensagens claras, como:
 
-♿ Acessibilidade (WCAG 2.1 Nível AA)
+* `feat: adicionar melhoria na acessibilidade`
+* `fix: corrigir layout da página`
+* `docs: atualizar README`
 
-Foram aplicadas várias melhorias pensando em acessibilidade:
-Estrutura semântica com uso de header, nav, main, section, footer e h1, h2, h3 organizados;
-Navegação por teclado: todos os links e botões podem ser acessados com Tab e Enter;
-Estilos de foco visível adicionados em links e botões, para o usuário saber onde está o cursor;
-Texto alternativo (alt) em todas as imagens importantes;
-Contraste de cores ajustado para ficar dentro da recomendação de 4.5:1 para textos normais;
-Suporte para leitores de tela com estrutura clara e textos descritivos.
-Modo de alto contraste / modo escuro
-Foi pensado um sistema usando CSS com variáveis, que facilita criar:
-Modo padrão (claro) – já aplicado nas atividades anteriores;
-Modo de alto contraste/escuro – que pode ser ativado trocando as variáveis de cor (ex.: fundo escuro, textos claros).
+Também foram criadas **releases** para marcar as versões:
 
-⚙️ Otimização para Produção
+* **v1.0.0** – HTML da Atividade 1
+* **v2.0.0** – CSS da Atividade 2
+* **v3.0.0** – JavaScript da Atividade 3
+* **v4.0.0** – Acessibilidade e otimização da Atividade 4
 
-Para simular um ambiente mais próximo de produção, foram feitas as seguintes ações:
-Separação limpa de HTML, CSS e JavaScript em pastas (/css, /js, /assets);
-Uso de design system com variáveis CSS, o que facilita manutenção e ajustes globais;
-Preparação dos arquivos para minificação (HTML, CSS e JS podem ser minificados usando ferramentas online ou build tools, reduzindo o tamanho dos arquivos);
-Imagens otimizadas manualmente (compressão) para reduzir o peso das páginas.
+---
 
-📂 Repositório no GitHub
+# ♿ Acessibilidade
 
-O projeto está disponível em um repositório público no GitHub, contendo:
-Código fonte completo (HTML, CSS e JS);
-Pastas organizadas (/css, /js, /assets/img);
-Histórico de commits;
-Estrutura de branches;
-README com a descrição das Atividades 1, 2, 3 e 4.
+Foram aplicadas melhorias seguindo as recomendações da WCAG:
 
-📄 Documentação Técnica (README)
+* Navegação por teclado (Tab e Enter funcionam em todos os botões e links)
+* Foco visível ao navegar com teclado
+* Textos alternativos nas imagens (`alt`)
+* Estrutura semântica usando tags como `header`, `nav`, `main`, `section`, `footer`
+* Contraste ajustado para facilitar a leitura
+* Modo de alto contraste usando variáveis de cor
 
-O README foi atualizado para:
-Explicar o contexto do projeto (ONG e terceiro setor);
-Descrever o que foi feito em cada atividade;
-Documentar as tecnologias usadas (HTML5, CSS3, JavaScript, Git/GitHub);
-Mostrar como rodar o projeto localmente (abrir o index.html no navegador);
-Registrar os aprendizados e a divisão de tarefas da dupla.
+---
 
-✨ Competências Desenvolvidas
+# ⚙️ Otimização
 
-Técnicas:
-HTML5, CSS3 e JavaScript;
-Organização de código e design system;
-Uso de Git e GitHub;
-Noções de acessibilidade e otimização.
+Para deixar o site mais leve:
 
-Profissionais:
-Planejamento em etapas (Atv 1 → 2 → 3 → 4);
-Organização de tarefas e versionamento;
-Escrita de documentação técnica simples.
+* Os arquivos foram separados em pastas (`css`, `js`, `assets/img`)
+* Feita compressão das imagens
+* Código preparado para minificação (HTML, CSS e JS)
 
-Sociais:
+---
 
-Consciência sobre o impacto de ferramentas digitais para ONGs;
-Atenção à acessibilidade para diferentes tipos de usuários;
-Uso da tecnologia com foco em inclusão social.
+# 📂 Organização do Repositório
 
-👥 Autores
+O repositório contém:
 
-Desenvolvido por
-Anselmo Junior e Luiz Felix da Silva Filho
+* Código completo do projeto
+* Pastas organizadas
+* Histórico de commits
+* Branches separadas por tarefa
+* README explicando o projeto
 
-Curso: Análise e Desenvolvimento de Sistemas
-Disciplina: Desenvolvimento Web – Atividade 4
+---
+
+# 📄 O que a documentação explica
+
+* Como o projeto foi feito
+* O que foi atualizado em cada atividade
+* Tecnologias utilizadas (HTML, CSS e JS)
+* Como abrir o projeto no computador (basta abrir o arquivo `index.html`)
+
+---
+
+# ✨ Competências Desenvolvidas
+
+* Uso de Git e GitHub
+* Organização de código
+* Acessibilidade e boas práticas de desenvolvimento
+* Estruturação de projetos web
+* Documentação simples e objetiva
+
+---
+
+# 👥 Autores
+
+**Anselmo Junior**
+**Luiz Felix da Silva Filho**
+
+Curso: *Análise e Desenvolvimento de Sistemas*
+Disciplina: *Desenvolvimento Web – Atividade 4*
+

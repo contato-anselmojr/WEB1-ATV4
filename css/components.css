@@ -1,0 +1,88 @@
+/* ===============================
+   🧱 COMPONENTES VISUAIS - ONG ESPERANÇA
+   =============================== */
+
+/* ===== BOTÕES ===== */
+.btn {
+  background: var(--cor-secundaria);
+  color: var(--cor-clara);
+  padding: var(--esp-2) var(--esp-3);
+  border: none;
+  border-radius: var(--raio-borda);
+  font-weight: 600;
+  font-size: var(--fs-padrao);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--sombra-suave);
+}
+
+.btn:hover {
+  background: var(--cor-destaque);
+  color: var(--cor-escura);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== ALERTAS / FEEDBACK ===== */
+.alert {
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--raio-borda);
+  margin: var(--esp-3) 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.alert-success {
+  background: var(--cor-sucesso);
+  color: var(--cor-clara);
+}
+
+.alert-error {
+  background: var(--cor-erro);
+  color: var(--cor-clara);
+}
+
+/* ===== TAGS / BADGES ===== */
+.tag {
+  display: inline-block;
+  background: var(--cor-terciaria);
+  color: var(--cor-escura);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: var(--fs-legenda);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--cor-clara);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  padding: var(--esp-3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: var(--raio-borda);
+  margin-bottom: var(--esp-2);
+}
+
+/* ===== GRADE DE CARDS ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}
