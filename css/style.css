@@ -26,7 +26,6 @@ header {
   box-shadow: var(--sombra-suave);
 }
 
-/* TOPO COM FLEXBOX */
 header .topo {
   display: flex;
   align-items: center;
@@ -35,7 +34,6 @@ header .topo {
   gap: var(--esp-2);
 }
 
-/* BLOCO ESQUERDO */
 header .info-ong {
   display: flex;
   align-items: center;
@@ -51,14 +49,12 @@ header .logo-topo {
   box-shadow: var(--sombra-suave);
 }
 
-/* TÍTULO */
 header .info-ong h1 {
   font-size: var(--fs-h1);
   font-weight: 700;
   color: var(--cor-clara);
 }
 
-/* MENU */
 header nav ul {
   list-style: none;
   display: flex;
@@ -78,8 +74,7 @@ header nav a:hover {
   color: var(--cor-destaque);
 }
 
-/* ===== CONTEÚDO PRINCIPAL (GRID) ===== */
-/* ===== BLOCO BRANCO CENTRAL PARA O FORMULÁRIO ===== */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 main {
   display: flex;
   flex-direction: column;
@@ -89,7 +84,7 @@ main {
   padding: 40px 20px;
 }
 
-/* ===== BLOCO DE INTRODUÇÃO (TÍTULO E TEXTO) ===== */
+/* ===== SEÇÃO INTRODUTÓRIA ===== */
 main section {
   background: #ffffff;
   color: #003b46;
@@ -114,8 +109,7 @@ main section p {
   line-height: 1.5;
 }
 
-
-/* Caixa branca onde fica o conteúdo do formulário */
+/* ===== FORMULÁRIOS ===== */
 main form {
   background: #ffffff;
   padding: 30px;
@@ -126,48 +120,43 @@ main form {
   color: #333;
 }
 
-/* Legendas e bordas do fieldset */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
 fieldset {
-  border: 2px solid var(--cor-primaria, #0a9396);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 25px;
+  border: 2px solid var(--cor-secundaria);
+  border-radius: var(--raio-borda);
+  padding: var(--esp-3);
   background: #f9f9f9;
 }
 
 legend {
   font-weight: bold;
-  color: var(--cor-primaria, #0a9396);
+  color: var(--cor-secundaria);
+  font-size: var(--fs-h3);
 }
 
-/* Inputs */
-input, button {
-  width: 100%;
-  padding: 10px;
+label {
+  font-weight: 600;
+}
+
+input,
+button {
+  padding: var(--esp-2);
+  font-size: var(--fs-padrao);
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
 }
 
 input:focus {
-  outline: 2px solid var(--cor-primaria, #0a9396);
+  outline: 2px solid var(--cor-secundaria);
 }
 
-/* Botão */
-button.btn {
-  background-color: var(--cor-secundaria, #007f89);
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button.btn:hover {
-  background-color: #005f73;
-}
-
-/* Mensagem de sucesso */
+/* ===== MENSAGEM DE SUCESSO ===== */
 #mensagem-sucesso {
   background: #d1fae5;
   border: 1px solid #10b981;
@@ -179,13 +168,7 @@ button.btn:hover {
   display: none;
 }
 
-
-/* SEÇÕES INTERNAS OCUPAM 12 COLUNAS */
-main section {
-  grid-column: span 12;
-  margin-bottom: var(--esp-3);
-}
-
+/* ===== TIPOGRAFIA ===== */
 h2 {
   font-size: var(--fs-h2);
   color: var(--cor-primaria);
@@ -203,57 +186,10 @@ p {
   margin-bottom: var(--esp-1);
 }
 
-/* ===== FORMULÁRIO ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--esp-2);
-}
-
-fieldset {
-  border: 2px solid var(--cor-secundaria);
-  border-radius: var(--raio-borda);
-  padding: var(--esp-3);
-}
-
-legend {
-  font-weight: bold;
-  color: var(--cor-secundaria);
-  font-size: var(--fs-h3);
-}
-
-label {
-  font-weight: 600;
-}
-
-input, button {
-  padding: var(--esp-2);
-  font-size: var(--fs-padrao);
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-}
-
-input:focus {
-  outline: 2px solid var(--cor-secundaria);
-}
-
-/* BOTÕES */
-button {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-clara);
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-button:hover {
-  background-color: var(--cor-destaque);
-  color: var(--cor-escura);
-}
-
-button:active {
-  transform: scale(0.97);
+/* ===== BLOCOS ===== */
+main section {
+  grid-column: span 12;
+  margin-bottom: var(--esp-3);
 }
 
 /* ===== RODAPÉ ===== */
@@ -264,6 +200,31 @@ footer {
   padding: var(--esp-3);
   margin-top: var(--esp-5);
   font-size: var(--fs-legenda);
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+/* Foco visível */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+/* Modo alto contraste */
+body.modo-alto-contraste {
+  background: #000;
+  color: #fff;
+}
+
+body.modo-alto-contraste main section,
+body.modo-alto-contraste main form {
+  background: #000;
+  color: #fff;
+  border: 2px solid yellow;
 }
 
 /* ===== RESPONSIVIDADE ===== */
