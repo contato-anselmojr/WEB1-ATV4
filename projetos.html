@@ -4,67 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Esperança - Projetos</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
-  <header>
+  <!-- ===== CABEÇALHO ===== -->
+  <header role="banner">
     <div class="topo">
+
       <div class="info-ong">
-        <img src="assets/img/ong_esperanca.JPG" alt="Logo ONG Esperança" class="logo-topo">
-        <h1>Projetos Sociais</h1>
+        <img src="assets/img/ong_esperanca.JPG"
+             alt="Logotipo circular da ONG Esperança"
+             class="logo-topo">
+
+        <h1 id="titulo-projetos">Projetos Sociais</h1>
       </div>
 
-      <nav>
+      <nav aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
+
+      <!-- Botão de Alto Contraste -->
+      <button id="toggle-contraste" class="btn-contraste" aria-pressed="false">
+        Alto Contraste
+      </button>
+
     </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Nossos Projetos</h2>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main role="main" tabindex="-1">
+
+    <!-- PROJETOS -->
+    <section aria-labelledby="tituloProjetos">
+      <h2 id="tituloProjetos">Nossos Projetos</h2>
 
       <div class="cards-grid">
-        <div class="card">
-          <img src="assets/img/ong_esperanca.JPG" alt="Educação para Todos">
+
+        <!-- CARD 1 -->
+        <article class="card">
+          <img src="assets/img/ong_esperanca.JPG"
+               alt="Professores e voluntários dando aula para jovens">
           <h3>Projeto Educação para Todos</h3>
           <p>Oferece aulas de reforço escolar e alfabetização para jovens e adultos.</p>
+
           <span class="tag">Educação</span>
           <span class="tag">Inclusão</span>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="assets/img/alimentar.JPG" alt="Projeto Alimentar com Amor">
+        <!-- CARD 2 -->
+        <article class="card">
+          <img src="assets/img/alimentar.JPG"
+               alt="Equipe distribuindo alimentos para famílias carentes">
           <h3>Projeto Alimentar com Amor</h3>
           <p>Distribui cestas básicas e refeições para famílias em situação de vulnerabilidade.</p>
+
           <span class="tag">Solidariedade</span>
           <span class="tag">Alimentação</span>
-        </div>
+        </article>
+
       </div>
     </section>
 
-    <section>
-      <h2>Como Ajudar</h2>
+    <!-- COMO AJUDAR -->
+    <section aria-labelledby="comoAjudarTitulo">
+      <h2 id="comoAjudarTitulo">Como Ajudar</h2>
+
       <p>Você pode contribuir com doações ou participar como voluntário.</p>
+
       <a href="cadastro.html" class="btn">Seja voluntário</a>
       <a href="#" class="btn">Doe agora</a>
     </section>
+
   </main>
 
-  <footer>
+  <!-- ===== RODAPÉ ===== -->
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Esperança</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="js/acessibilidade.js"></script>
   <script src="js/templates.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/form-validation.js"></script>
   <script src="js/spa.js"></script>
+
 </body>
 </html>
