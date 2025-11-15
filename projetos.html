@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/contraste.css" id="tema-contraste" disabled>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 
       <div class="info-ong">
         <img src="assets/img/ong_esperanca.JPG"
-             alt="Logotipo circular da ONG Esperança"
+             alt="Logotipo da ONG Esperança"
              class="logo-topo">
 
         <h1 id="titulo-projetos">Projetos Sociais</h1>
@@ -27,13 +28,16 @@
       <nav aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="projetos.html" aria-current="page" class="ativo">Projetos</a></li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
 
       <!-- Botão de Alto Contraste -->
-      <button id="toggle-contraste" class="btn-contraste" aria-pressed="false">
+      <button id="toggle-contraste"
+              class="btn-contraste"
+              aria-label="Ativar modo alto contraste"
+              aria-pressed="false">
         Alto Contraste
       </button>
 
@@ -43,7 +47,7 @@
   <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <main role="main" tabindex="-1">
 
-    <!-- PROJETOS -->
+    <!-- LISTA DE PROJETOS -->
     <section aria-labelledby="tituloProjetos">
       <h2 id="tituloProjetos">Nossos Projetos</h2>
 
@@ -52,7 +56,7 @@
         <!-- CARD 1 -->
         <article class="card">
           <img src="assets/img/ong_esperanca.JPG"
-               alt="Professores e voluntários dando aula para jovens">
+               alt="Professores e voluntários ensinando jovens em sala comunitária">
           <h3>Projeto Educação para Todos</h3>
           <p>Oferece aulas de reforço escolar e alfabetização para jovens e adultos.</p>
 
@@ -63,7 +67,7 @@
         <!-- CARD 2 -->
         <article class="card">
           <img src="assets/img/alimentar.JPG"
-               alt="Equipe distribuindo alimentos para famílias carentes">
+               alt="Voluntários distribuindo alimentos às famílias da comunidade">
           <h3>Projeto Alimentar com Amor</h3>
           <p>Distribui cestas básicas e refeições para famílias em situação de vulnerabilidade.</p>
 

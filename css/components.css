@@ -1,88 +1,213 @@
-/* ===============================
-   🧱 COMPONENTES VISUAIS - ONG ESPERANÇA
-   =============================== */
-
-/* ===== BOTÕES ===== */
+/* BOTÕES */
 .btn {
-  background: var(--cor-secundaria);
+  background-color: var(--cor-secundaria);
+  padding: var(--esp-2);
   color: var(--cor-clara);
-  padding: var(--esp-2) var(--esp-3);
-  border: none;
   border-radius: var(--raio-borda);
+  text-decoration: none;
   font-weight: 600;
-  font-size: var(--fs-padrao);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--sombra-suave);
+  display: inline-block;
+  transition: 0.2s ease;
+  border: 2px solid transparent;
 }
 
 .btn:hover {
-  background: var(--cor-destaque);
+  background-color: var(--cor-destaque);
   color: var(--cor-escura);
-  transform: translateY(-2px);
 }
 
-.btn:active {
-  transform: scale(0.98);
+.btn:focus {
+  outline: 3px solid #ffdd57;
+  outline-offset: 3px;
 }
 
-/* ===== ALERTAS / FEEDBACK ===== */
-.alert {
-  padding: var(--esp-2) var(--esp-3);
-  border-radius: var(--raio-borda);
-  margin: var(--esp-3) 0;
-  font-weight: 500;
-  text-align: center;
+/* BOTÃO DE CONTRASTE */
+.btn-contraste {
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
 }
 
-.alert-success {
-  background: var(--cor-sucesso);
-  color: var(--cor-clara);
+.btn-contraste:focus {
+  outline: 3px solid #ffdd57;
+  outline-offset: 3px;
 }
 
-.alert-error {
-  background: var(--cor-erro);
-  color: var(--cor-clara);
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--esp-3);
 }
 
-/* ===== TAGS / BADGES ===== */
-.tag {
-  display: inline-block;
-  background: var(--cor-terciaria);
-  color: var(--cor-escura);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: var(--fs-legenda);
-  font-weight: 600;
-  margin-right: 6px;
-}
-
-/* ===== CARDS ===== */
 .card {
-  background: var(--cor-clara);
+  background: var(--fundo-card);
+  padding: var(--esp-3);
   border-radius: var(--raio-borda);
   box-shadow: var(--sombra-suave);
-  padding: var(--esp-3);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
   width: 100%;
-  max-width: 220px;
   border-radius: var(--raio-borda);
   margin-bottom: var(--esp-2);
 }
 
-/* ===== GRADE DE CARDS ===== */
+/* TAGS */
+.tag {
+  background: var(--cor-primaria);
+  padding: 4px 10px;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 0.85rem;
+}
+/* ===============================
+   BOTÕES PADRÃO
+================================ */
+.btn {
+  background-color: var(--cor-secundaria);
+  padding: var(--esp-2);
+  color: var(--cor-clara);
+  border-radius: var(--raio-borda);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-escura);
+}
+
+.btn:focus {
+  outline: 3px solid #ffdd57 !important;
+  outline-offset: 3px;
+}
+
+/* ===============================
+   BOTÃO DE ALTO CONTRASTE
+================================ */
+.btn-contraste {
+  background: #222;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.btn-contraste:hover {
+  background: #444;
+}
+
+.btn-contraste:focus {
+  outline: 3px solid #ffdd57 !important;
+  outline-offset: 3px;
+}
+
+/* Estilo automático em modo alto contraste */
+body.modo-alto-contraste .btn-contraste {
+  background: yellow;
+  color: black;
+  border-color: black;
+}
+
+/* ===============================
+   GRID DE CARDS
+================================ */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--esp-3);
-  margin-top: var(--esp-4);
+}
+
+/* ===============================
+   CARD
+================================ */
+.card {
+  background: var(--fundo-card);
+  padding: var(--esp-3);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--raio-borda);
+  margin-bottom: var(--esp-2);
+}
+
+/* Acessibilidade */
+.card:focus-within {
+  outline: 3px solid #ffdd57;
+  outline-offset: 4px;
+}
+
+/* ===============================
+   TAGS DOS PROJETOS
+================================ */
+.tag {
+  background: var(--cor-primaria);
+  padding: 4px 10px;
+  color: #fff;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 0.85rem;
+}
+
+.tag:focus {
+  outline: 3px solid #ffdd57 !important;
+  outline-offset: 3px;
+}
+
+/* Modo alto contraste */
+body.modo-alto-contraste .tag {
+  background: yellow;
+  color: black;
+}
+
+/* ===============================
+   ALERTA SUCESSO
+================================ */
+.alert-success {
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Modo alto contraste */
+body.modo-alto-contraste .alert-success {
+  background: black;
+  border-color: yellow;
+  color: yellow;
+}
+
+.tag:focus {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+/* ALERTA SUCESSO */
+.alert-success {
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: bold;
 }
